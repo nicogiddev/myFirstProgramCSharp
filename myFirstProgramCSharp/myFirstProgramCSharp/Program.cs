@@ -12,7 +12,8 @@ namespace myFirstProgramCSharp
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.BackgroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Hello World !");
+            string name = Console.ReadLine();
+            Console.WriteLine("Hello World !" + name);
             Console.Read();
         }
     }
