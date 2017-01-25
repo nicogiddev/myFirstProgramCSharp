@@ -26,29 +26,33 @@ namespace myFirstProgramCSharp
                 }
             }
 
-            // Jouer avec des If/Else
+            // Jouer avec des If/Else and Do/While
 
-            Console.WriteLine("Saisissez le type d'opération Multiplier (m) ou Diviser (d) : ");
-            String decision = Console.ReadLine();
-            Console.WriteLine("Saisisez un chiffre");
-            String chaineChiffre = Console.ReadLine();
-            int chiffre = Convert.ToInt32(chaineChiffre);
+            do
+            {
+                Console.WriteLine("Saisissez le type d'opération Multiplier (m) ou Diviser (d) : ");
+                String decision = Console.ReadLine();
+                Console.WriteLine("Saisisez un chiffre");
+                String chaineChiffre = Console.ReadLine();
+                int chiffre = Convert.ToInt32(chaineChiffre);
 
-            if (decision == "m")
-            {
-                chiffre *= chiffre;
-                Console.WriteLine(" Résultat de la multilication = " + chiffre.ToString());
-            }
-            else if (decision == "d")
-            {
-                chiffre /= chiffre;
-                Console.WriteLine(" Résultat  de la division = " + chiffre.ToString());
-            }
-            else
-            {
-                Console.WriteLine("Vous n'avez pas saissi une information correcte.");
-            }
-            Console.Read(); 
-        }
+                if (decision == "m")
+                {
+                    chiffre *= chiffre;
+                    Console.WriteLine(" Résultat de la multilication = " + chiffre.ToString());
+                }
+                else if (decision == "d")
+                {
+                    chiffre /= chiffre;
+                    Console.WriteLine(" Résultat  de la division = " + chiffre.ToString());
+                }
+                else
+                {
+                    Console.WriteLine("Vous n'avez pas saissi une information correcte.");
+                }
+
+
+            } while (Console.ReadLine() != "q");
+          }  
     }
 }
